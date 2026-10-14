@@ -8,6 +8,9 @@ app.use(express.json());
 const authRoutes = require('./routes/authRoutes');
 app.use('/auth', authRoutes);
 
+const quadraRoutes = require('./routes/quadraRoutes');
+app.use('/quadras', quadraRoutes);
+
 // Rota de health check — útil para saber se a API está no ar
 app.get('/', (req, res) => {
   res.json({ mensagem: 'API BahQuadras funfando' });
